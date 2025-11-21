@@ -623,76 +623,102 @@ video {
 
 /**/
 /*RESP*/
-@media (max-width: 380px) {
-  .header-spacer {
-    height: 95px;
-  }
-}
+/*header*/
+                                  /*pad*/
+                                  @media (max-width: 900px) {
+                                    .header-spacer {
+                                      height: 130px;
+                                    }
+                                  }
+                                
+                                  /*phone*/
+                                  @media (max-width: 600px) {
+                                    .header-spacer {
+                                      height: 110px;
+                                    }
 
-/*TYPE*/
-@media (max-width: 750px) {
+                                    .marquee-group span {
+                                        font-size: 15px;                      
+                                    }
+                                  }
+                                
+                                  /*tiny phone*/
+                                  @media (max-width: 380px) {
+                                    .header-spacer {
+                                      height: 95px;
+                                    }
+                                  }
+                                
+                                  /*content*/
+                                  @media (max-width: 360px) {
+                                    .noms { font-size: clamp(0.8rem, 6vw, 1.2rem); }
+                                    .bimage img { width: clamp(40px, 10vw, 60px); }
+                                  }
 
-  p, .alinea {
-    font-size: clamp(0.95rem, 3.2vw, 1.2rem);
-    line-height: 1.5;
-    padding: 10px;
-    margin: 0;
-  }
-
-  .legend {
-    font-size: clamp(0.7rem, 2.6vw, 0.9rem);
-  }
-}
-
-
-/*GRID*/
-@media (max-width: 750px) {
-  .D1, .D2, .D3, .D4 {
-    grid-column: auto !important;
-    width: 100% !important;
-    position: static !important;
-    display: block !important;
-  }
-
-  /* Grilles → 1 colonne */
-  .grid-two,
-  .grid-three,
-  .grid-four {
-    grid-template-columns: 1fr !important;
-    gap: 18px;
-    margin: 10px 0;
-    padding: 0 10px;
-  }
-
-  /* Colonne texte + images */
-  .column,
-  .colonne,
-  .element {
-    display: block;
-    width: 100% !important;
-    max-width: 100%;
-  }
-
-  /* Images pleine largeur */
-  .column img,
-  .image-colonne,
-  .grid-item img,
-  .mini-maxi {
-    width: 100% !important;
-    height: auto !important;
-    margin: 12px 0;
-  }
-}
-/*FIN RESP*/
-
-
-
-@media (max-width: 600px) {
-  .floating-audio-player {
-    width: 180px;
-  }
-
-  .player-header {
-    font-size: 14px;
-  }
-}
+                                  /*TYPE*/
+                                  @media (max-width: 750px) {
+                                  
+                                    p, .alinea {
+                                      font-size: clamp(0.95rem, 3.2vw, 1.2rem);
+                                      line-height: 1.5;
+                                      padding: 10px;
+                                      margin: 0;
+                                    }
+                                  
+                                    .legend {
+                                      font-size: clamp(0.7rem, 2.6vw, 0.9rem);
+                                    }
+                                  }
+                                  
+                                  
+                                  /*GRID*/
+                                  @media (max-width: 750px) {
+                                    .D1, .D2, .D3, .D4 {
+                                      grid-column: auto !important;
+                                      width: 100% !important;
+                                      position: static !important;
+                                      display: block !important;
+                                    }
+                                  
+                                    /* Grilles → 1 colonne */
+                                    .grid-two,
+                                    .grid-three,
+                                    .grid-four {
+                                      grid-template-columns: 1fr !important;
+                                      gap: 18px;
+                                      margin: 10px 0;
+                                      padding: 0 10px;
+                                    }
+                                  
+                                    /* Colonne texte + images */
+                                    .column,
+                                    .colonne,
+                                    .element {
+                                      display: block;
+                                      width: 100% !important;
+                                      max-width: 100%;
+                                    }
+                                  
+                                    /* Images pleine largeur */
+                                    .column img,
+                                    .image-colonne,
+                                    .grid-item img,
+                                    .mini-maxi {
+                                      width: 100% !important;
+                                      height: auto !important;
+                                      margin: 12px 0;
+                                    }
+                                  }
+                                  /*FIN RESP*/
+                                  
+                                  
+                                  
+                                  @media (max-width: 600px) {
+                                    .floating-audio-player {
+                                      width: 180px;
+                                    }
+                                  
+                                    .player-header {
+                                      font-size: 14px;
+                                    }
+                                  }
