@@ -636,10 +636,6 @@ video {
                                     .header-spacer {
                                       height: 110px;
                                     }
-
-                                    .marquee-group span {
-                                        font-size: 15px;                      
-                                    }
                                   }
                                 
                                   /*tiny phone*/
