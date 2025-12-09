@@ -509,7 +509,7 @@ video {
                                 
                                   /*content*/
                                   @media (max-width: 360px) {
-                                    .marquee-group span { font-size: 16px;}
+                                    .marquee-group span { margin-right: 15px; font-size: 16px;}
                                     .noms { font-size: 20px; }
                                     .bimage img { width: clamp(40px, 10vw, 60px); }
                                   }
