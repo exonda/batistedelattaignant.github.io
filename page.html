@@ -14,9 +14,15 @@
 <!--DÉBUT ENTÈTE-->
 
 <div class="fixed-top">
-    <div class="marquee bandeau">
+     <div class="marquee bandeau">
         <div class="marquee-group">
-            <span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span><span>/ - exon.da - /</span>
+            <span>exon.da</span><span>exon.da</span><span>exon.da</span><span>exon.da</span>
+            <span>exon.da</span><span>exon.da</span><span>exon.da</span><span>exon.da</span>
+            <span>exon.da</span>
+    <!--duplication pour effet continu-->
+            <span>exon.da</span><span>exon.da</span><span>exon.da</span><span>exon.da</span>
+            <span>exon.da</span><span>exon.da</span><span>exon.da</span><span>exon.da</span>
+            <span>exon.da</span>
         </div>
     </div>
 
@@ -31,8 +37,48 @@
 <div class="header-spacer"></div>
 
 <div class="background-mag">
-  <img src="BACKGROUNDS/1.png" alt="fond">
+  <img id="bg-rotate" src="" alt="fond">
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const images = [
+    "BACKGROUNDS/CARROUSEL/1.jpg",
+    "BACKGROUNDS/CARROUSEL/2.jpg",
+    "BACKGROUNDS/CARROUSEL/3.jpg",
+    "BACKGROUNDS/CARROUSEL/4.jpg",
+    "BACKGROUNDS/CARROUSEL/5.jpg",
+    "BACKGROUNDS/CARROUSEL/6.jpg",
+    "BACKGROUNDS/CARROUSEL/7.jpg",
+    "BACKGROUNDS/CARROUSEL/8.jpg",
+    "BACKGROUNDS/CARROUSEL/9.jpg",
+    "BACKGROUNDS/CARROUSEL/10.jpg",
+    "BACKGROUNDS/CARROUSEL/11.jpg",
+    "BACKGROUNDS/CARROUSEL/12.jpg",
+    "BACKGROUNDS/CARROUSEL/13.jpg",
+    "BACKGROUNDS/CARROUSEL/14.jpg",
+    "BACKGROUNDS/CARROUSEL/15.jpg",
+    "BACKGROUNDS/CARROUSEL/16.jpg",
+    "BACKGROUNDS/CARROUSEL/17.jpg",
+    "BACKGROUNDS/CARROUSEL/18.jpg"
+    
+  ];
+  
+  let index = parseInt(localStorage.getItem("bg-index") || "-1", 10);
+
+  // Passe à l’image suivante
+  index = (index + 1) % images.length;
+
+  // Enregistre pour le prochain refresh
+  localStorage.setItem("bg-index", index);
+
+  // Applique l’image
+  const img = document.getElementById("bg-rotate");
+  img.src = images[index];  
+
+});
+</script>
 
 <!---->    
 <!---->
@@ -85,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                             </div>
   <div class="grid">
     <div class="column">
-    <div class="dropdown D1">
+    <div class="dropdown D1 box">
       <p class="liens" id="apropos-btn">À PROPOS</p>
 
       <div class="dropdown-content box" id="apropos-menu">
@@ -117,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                             </div>
   <div class="grid">
     <div class="column">
-    <div class="dropdown D2">
+    <div class="dropdown D2 box">
       <p>
         <a href="#" class="liens" id="projets-btn">PROJETS</a>
       </p>
@@ -186,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                           </div>
   <div class="grid">
     <div class="column">
-    <div class="dropdown D3">
+    <div class="dropdown D3 box">
         <p>
           <a href="#" class="liens" id="contact-btn">CONTACTS</a>
         </p>
@@ -216,10 +262,12 @@ document.addEventListener("DOMContentLoaded", function() {
                                             <div  class="ligne"></div>
                                             <div class="croix droite"></div>
                                           </div>
+
+
+                                          
 </div> <!--container-->
 
 </div> <!--dropdown raw-->
-
         
 <footer class="footer">
     <f>&copy; 2025 Batiste Delattaignant / exon.da - Tous droits réservés.</f>
